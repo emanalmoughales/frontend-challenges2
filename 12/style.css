@@ -1,0 +1,151 @@
+html {
+    font-size: clamp(10px, 12px + 0.3vw, 16px);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(216, 12%, 8%);
+    font-family: "Overpass", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.container {
+    background-image: linear-gradient(to bottom, hsl(213, 19%, 18%), hsl(212, 21%, 12%));
+    max-width: 25rem;
+    width: 100%;
+    padding: 1.8rem;
+    border-radius: 20px;
+}
+
+.rating_state.hidden {
+    display: none;
+}
+
+.rating_state {
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+}
+
+.icon {
+    background-color: hsla(210, 20%, 20%, 0.999);
+    padding: 0.8rem 0.8rem 0.6rem 0.8rem;
+    border-radius: 100%;
+    border: none;
+    width: 3rem;
+    text-align: center;
+}
+
+.header {
+    color: hsl(0, 100%, 100%);
+}
+
+.details {
+    color: hsl(217, 12%, 63%);
+    padding-right: 1rem;
+}
+
+.rate_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0.8rem 0;
+}
+
+.rate_button>* {
+    background-color: hsl(213, 19%, 18%);
+    color: hsl(217, 12%, 63%);
+    width: 3rem;
+    height: 3rem;
+    padding: 0.8rem;
+    border-radius: 100%;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.rate_button>*:hover {
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(216, 12%, 8%);
+}
+
+.rate_button button.active {
+    background-color: hsl(0, 100%, 100%);
+    color: hsl(216, 12%, 8%);
+}
+
+button {
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(216, 12%, 8%);
+    padding: 0.8rem;
+    border-radius: 20px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(0, 100%, 100%);
+}
+
+.thank_you_state.active {
+    display: flex;
+}
+
+.thank_you_state {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+}
+
+.card_img {
+    width: 50%;
+    height: 50%;
+}
+
+.card_head {
+    color: hsl(0, 100%, 100%);
+}
+
+.card_details {
+    color: hsl(217, 12%, 63%);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.select_info {
+    background-color: hsl(213, 19%, 18%);
+    color: hsl(25, 67%, 58%);
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 20px;
+}
+
+.attribution {
+    font-size: 0.6875rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
