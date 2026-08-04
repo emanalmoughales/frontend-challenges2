@@ -1,0 +1,84 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+  <link href="./src/output.css" rel="stylesheet" />
+  <script defer src="./main.js"></script>
+  <title>Frontend Mentor | Contact form</title>
+</head>
+
+<body class="bg-Green1-200 flex flex-col items-center justify-center min-h-screen py-5">
+  <!-- alert -->
+  <div class="success_message hidden bg-Grey-900 text-White p-6 rounded-2xl max-w-xl">
+    <div class="flex items-center gap-4 mb-1">
+      <img src="./assets/images/icon-success-check.svg" alt="Success check icon" />
+      <h2 class="font-bold">Message Sent!</h2>
+    </div>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+  <div class="bg-White text-Grey-900 p-6 rounded-2xl w-full max-w-xl flex flex-col gap-6">
+    <h1 class="text-2xl font-bold text-Green-900">Contact Us</h1>
+    <form class="flex flex-col gap-4 w-full" id="form">
+      <div class="flex flex-col sm:flex-row gap-5 w-full">
+        <div class="flex flex-col gap-2 w-full">
+          <label for="first_name" class="block">First Name <span class="text-Green2-600">*</span></label>
+          <input aria-invalid="false" aria-describedby="first_name_error" class="outline-1 outline-Grey-500 p-2 focus:outline-2 focus:outline-Green2-600 focus:outline-offset-2 rounded-md h-10 " id="first_name" type="text" />
+          <p class="hidden text-red-800 text-xs" id="first_name_error">This field is required</p>
+        </div>
+        <div class="flex flex-col gap-2 w-full">
+          <label for="last_name" class="block">Last Name <span class="text-Green2-600">*</span></label>
+          <input aria-invalid="false" aria-describedby="last_name_error" class="outline-1 outline-Grey-500 p-2 focus:outline-Green2-600 rounded-md h-10" id="last_name" type="text" />
+          <p class="hidden text-red-800 text-xs" id="last_name_error">This field is required</p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-2">
+        <label for="email">Email Address <span class="text-Green2-600">*</span></label>
+        <input aria-invalid="false" aria-describedby="email_error" class="outline-1 outline-Grey-500 p-2 focus:outline-Green2-600 rounded-md h-10" id="email" type="text" />
+        <p class="hidden text-red-800 text-xs" id="valid_email_error">Please enter a valid email address</p>
+        <p class="hidden text-red-800 text-xs" id="email_error">This field is required</p>
+      </div>
+      <fieldset aria-invalid="false" aria-describedby="queryType_error" class="flex flex-col gap-3">
+        <legend>Query Type <span class="text-Green2-600">*</span></legend>
+        <div class="flex flex-col sm:flex-row w-full gap-4 mt-4">
+          <label for="general" class="peer border border-Grey-500 rounded-md px-4 py-2 flex gap-4 items-center w-full has-checked:bg-Green1-200 has-checked:border-Green2-600">
+            <input class="peer size-3.5 rounded-full appearance-none border border-gray-300 accent-Green2-600 checked:appearance-auto dark:border-gray-600 dark:accent-Green2-600" id="general" type="radio" name="queryType" value="general" />
+            General Enquiry
+          </label>
+          <label for="support" class="peer border border-Grey-500 rounded-md px-4 py-2 flex gap-4 items-center w-full has-checked:bg-Green1-200 has-checked:border-Green2-600">
+            <input class="peer size-3.5 rounded-full appearance-none border border-gray-300 accent-Green2-600 checked:appearance-auto dark:border-gray-600 dark:accent-Green2-600" id="support" type="radio" name="queryType" value="support" class="" />
+            Support Request
+          </label>
+        </div>
+      </fieldset>
+      <p class="hidden text-red-800 text-xs" id="queryType_error">Please select a query type</p>
+
+      <label for="message">Message <span class="text-Green2-600">*</span></label>
+      <textarea id="message" aria-invalid="false" aria-describedby="message_error" class="outline-1 outline-Grey-500 p-2 resize-none focus:outline-Green2-600 rounded-md h-30"></textarea>
+      <p class="hidden text-red-800 text-xs" id="message_error">This field is required</p>
+
+      <label for="consent" class="peer items-center">
+        <input class="peer size-3.5 appearance-none border border-gray-300 accent-Green2-600 checked:appearance-auto dark:border-gray-600 dark:accent-Green2-600 mr-2" id="consent" type="checkbox" aria-invalid="false" aria-describedby="consent_error" />
+        I consent to being contacted by the team
+        <span class="text-Green2-600">*</span>
+      </label>
+      <p class="hidden text-red-800 text-xs" id="consent_error">
+        To submit this form, please consent to being contacted
+      </p>
+      <button type="submit" class="bg-Green2-600 text-White py-2 rounded-lg cursor-pointer mt-3">Submit</button>
+    </form>
+  </div>
+
+  <footer class="mt-3">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+</body>
+
+</html>
