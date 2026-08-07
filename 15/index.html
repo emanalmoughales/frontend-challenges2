@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/output.css">
+  <script src="./main.js" defer></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | News homepage</title>
+</head>
+
+<body class="lg:py-15 lg:px-30 p-5 font-display2">
+  <nav aria-label="Main navigation" class="flex justify-between items-center mb-10">
+    <img src="./assets/images/logo.svg" alt="logo_img">
+    <ul class="sm:flex gap-8 *:hover:text-Soft-red *:cursor-pointer hidden">
+      <li>Home</li>
+      <li>New</li>
+      <li>Popular</li>
+      <li>Trending</li>
+      <li>Categories</li>
+    </ul>
+    <button aria-label="Open menu" class="sm:hidden cursor-pointer open_menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="17">
+        <g fill="#00001A" fill-rule="evenodd">
+          <path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z" />
+          <path d="M0 0h40v3H0z" />
+        </g>
+      </svg>
+    </button>
+    <div aria-modal="true" aria-label="Navigation menu" role="dialog" class="phone_menu fixed right-0 top-0 sm:hidden flex flex-col gap-10 bg-white h-full w-[70%] items-end px-5 pt-10">
+      <button aria-label="Close menu" class="cursor-pointer close_menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="31">
+          <g fill="#00001A" fill-rule="evenodd">
+            <path d="m2.919.297 28.284 28.284-2.122 2.122L.797 2.419z" />
+            <path d="M.797 28.581 29.081.297l2.122 2.122L2.919 30.703z" />
+          </g>
+        </svg>
+      </button>
+      <ul class="flex flex-col sm:hidden gap-5 *:hover:text-Soft-red *:cursor-pointer text-xl w-full py-10">
+        <li>Home</li>
+        <li>New</li>
+        <li>Popular</li>
+        <li>Trending</li>
+        <li>Categories</li>
+      </ul>
+    </div>
+  </nav>
+  <div class="flex flex-col gap-15">
+    <div class="flex flex-col sm:flex-row gap-8">
+      <div class="flex flex-col gap-8 sm:w-[70%]">
+        <picture>
+          <source media="(min-width: 768px)" srcset="./assets/images/image-web-3-desktop.jpg">
+          <img src="./assets/images/image-web-3-mobile.jpg" alt="Illustration representing Web 3.0" class="w-full h-65">
+        </picture>
+        <div class="flex sm:flex-row flex-col flex-wrap justify-between gap-8">
+          <h1 class="text-6xl font-bold sm:w-100"> The Bright Future of Web 3.0?</h1>
+          <div class="flex flex-col gap-5">
+            <p class="sm:w-90">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people.
+              But is it really fulfilling its promise?</p>
+            <button class="bg-Very-dark-blue text-Off-white cursor-pointer uppercase self-start py-4 px-8 font-bold hover:bg-Soft-red hover:text-Very-dark-blue text-sm mt-4 tracking-[0.4rem]">Read more</button>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col bg-Very-dark-blue p-8 sm:w-[30%]">
+        <h2 class="text-Soft-orange text-4xl font-bold mb-5">New</h2>
+        <div class="border-b border-Dark-grayish-blue pb-5 mb-6">
+          <a href="#" class="text-Off-white hover:text-Soft-orange text-lg font-bold">Hydrogen VS Electric Cars</a>
+          <p class="text-Grayish-blue font-light mt-2">Will hydrogen-fueled cars ever catch up to EVs?</p>
+        </div>
+        <div class="border-b border-Dark-grayish-blue pb-5 mb-6">
+          <a href="#" class="text-Off-white hover:text-Soft-orange text-lg font-bold">The Downsides of AI Artistry</a>
+          <p class="text-Grayish-blue font-light mt-2">What are the possible adverse effects of on-demand AI image generation?</p>
+        </div>
+        <div class="">
+          <a href="#" class="text-Off-white hover:text-Soft-orange text-lg font-bold">Is VC Funding Drying Up?</a>
+          <p class="text-Grayish-blue font-light mt-2">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col sm:flex-row flex-wrap sm:justify-between gap-8 w-full">
+      <div class="flex gap-2">
+        <img src="./assets/images/image-retro-pcs.jpg" alt="Retro computer" class="w-20">
+        <div class="flex flex-col gap-2">
+          <h3 class="text-3xl font-bold text-Soft-red">01</h3>
+          <h4 class="font-black text-[16px] hover:text-Soft-red cursor-pointer">Reviving Retro PCs</h4>
+          <p class="sm:w-60 text-gray-500">What happens when old PCs are given modern upgrades?</p>
+        </div>
+      </div>
+      <div class="flex gap-2">
+        <img src="./assets/images/image-top-laptops.jpg" alt="Laptop keyboard" class="w-20">
+        <div class="flex flex-col gap-2">
+          <h3 class="text-3xl font-bold text-Soft-red">02</h3>
+          <h4 class="font-black text-[16px] hover:text-Soft-red cursor-pointer">Top 10 Laptops of 2022</h4>
+          <p class="sm:w-60 text-gray-500">Our best picks for various needs and budgets.</p>
+        </div>
+      </div>
+      <div class="flex gap-2">
+        <img src="./assets/images/image-gaming-growth.jpg" alt="Gaming controller" class="w-20">
+        <div class="flex flex-col gap-2">
+          <h3 class="text-3xl font-bold text-Soft-red">03</h3>
+          <h4 class="font-black text-[16px] hover:text-Soft-red cursor-pointer">The Growth of Gaming</h4>
+          <p class="sm:w-60 text-gray-500">How the pandemic has sparked fresh opportunities.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-[0.6875rem] text-center mt-10">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" class="text-Soft-red">Frontend Mentor</a>.
+    Coded by
+    <a href="https://github.com/emanalmoughales/frontend-challenges" class="text-Soft-red">Eman</a>.
+  </footer>
+</body>
+
+</html>
